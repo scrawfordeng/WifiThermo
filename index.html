@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 id='msg'></h1>
+        <script src='/socket.io/socket.io.js'></script>
+        <script>
+            var socket = io();
+
+            socket.on('Temp', function(data){
+                document.getElementById('msg').innerText = 'Pi temp (F): ' + data;
+            });
+
+        </script>
+    </body>
+</html>
