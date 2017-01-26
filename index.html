@@ -1,16 +1,21 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-
     </head>
-    <body>
-        <h1 id='msg'></h1>
+    <body>        
+        <h1 id='msg'>Loading...</h1>
+        <canvas id="chart" width="400" height="200"></canvas>
         <script src='/socket.io/socket.io.js'></script>
+        <script type="text/javascript" src="../smoothie.js"></script>
         <script>
+            function createGraph(){
+            
+            };
+
             var socket = io();
 
             socket.on('Temp', function(data){
-                document.getElementById('msg').innerText = 'Pi temp (F): ' + data;
+                document.getElementById('msg').innerText = 'Probe temp (F): ' + data;
             });
 
         </script>
